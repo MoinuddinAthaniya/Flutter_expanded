@@ -11,33 +11,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body:SafeArea(
-        child: Row(
+        child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(20),
-              color: Colors.red,
-              child: Text('1'),
-            ),
             Expanded(
-              flex: 7,
-                child: Container
-            (
+                flex: 8,
+                child: Container(
+                  constraints: BoxConstraints.expand(),
+                  //padding: EdgeInsets.all(20),
+              color: Colors.red,
 
-              padding: EdgeInsets.all(20),
-             // width: 70,
-              color: Colors.blue,
-              child: Text('2'),
+              child: Center(child: Text('8',
+                style: TextStyle(color: Colors.white,
+                fontSize: 30,
+                ),)),
             )
             ),
             Expanded(
-              flex: 3,
-                child:Container
-                (
-                  padding: EdgeInsets.all(20),
-                  // width: 200,
-                  color: Colors.green,
-                  child: Text('3'),
-                )
+              flex: 5,
+                child: Container(
+            constraints: BoxConstraints.expand(),
+             // padding: EdgeInsets.all(20),
+             // width: 70,
+              color: Colors.indigo,
+              child: Center(child: Text('5',
+              style: TextStyle(color: Colors.white,
+                fontSize: 30,
+              ),)),
+            )
             ),
 
           ],
